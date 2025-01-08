@@ -49,29 +49,151 @@
 }
 
 .page-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
 
-  .search-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: #fff;
-    padding: 10px;
+.search-wrapper {
+  padding: 20px;
+  background: #fff;
+}
+
+.scrollable-content {
+  padding: 8px;
+}
+
+// 分享按钮样式
+// .share-section {
+//   margin-bottom: 20px;
+
+//   .share-button {
+//     width: 100%;
+//     background: linear-gradient(to right, #ff6034, #ee0a24);
+//     border-radius: 12px;
+//     padding: 20px;
+//     border: none;
+
+//     .share-text {
+//       color: #fff;
+//       font-size: 18px;
+//       font-weight: bold;
+//       margin-bottom: 8px;
+//     }
+
+//     .share-desc {
+//       color: rgba(255, 255, 255, 0.8);
+//       font-size: 14px;
+//     }
+//   }
+// }
+
+// 热门销售列表样式
+.hot-sales {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
   }
 
-  .scrollable-content {
-    flex: 1;
-    overflow-y: auto;
-    margin-top: 60px; // 搜索框的高度
-    margin-bottom: 50px; // TabBar的高度
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    .product-image {
+      width: 100%;
+      height: 120px;
+    }
+
+    .product-info {
+      padding: 12px;
+
+      .product-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .product-tag {
+        display: inline-block;
+        background: #f5f5f5;
+        color: #666;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .product-badge {
+        color: #ff6034;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .product-sales {
+        color: #999;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+
+        .price {
+          color: #ff6034;
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .original-price {
+          color: #999;
+          font-size: 14px;
+          text-decoration: line-through;
+        }
+      }
+    }
   }
 }
 
 .content {
   height: 100%;
   overflow-y: auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+.product-card {
+  width: 100%;
+  height: 280px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 8px;
 }

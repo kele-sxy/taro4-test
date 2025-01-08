@@ -31,7 +31,7 @@ const CustomTabBar = () => {
 
   return (
     <View className='tab-bar'>
-      <Tabbar className="custom-tabbar" fixed value={getCurrentTab()} onSwitch={handleSwitch}>
+      <Tabbar className="custom-tabbar" fixed value={getCurrentTab()} onSwitch={handleSwitch} inactiveColor="#646566" activeColor="#fa2c19">
         <TabbarItem title="首页" icon={<Home />} />
         <TabbarItem title="分类" icon={<Category />} />
         <TabbarItem title="购物车" icon={<Cart />} />
