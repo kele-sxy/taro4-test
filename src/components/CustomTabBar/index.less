@@ -1,0 +1,36 @@
+.tab-bar {
+  .nut-tabbar {
+    height: 100rpx;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    &--fixed {
+      z-index: 1000;
+    }
+  }
+
+  .nut-tabbar-item {
+    color: #999;
+
+    &__icon {
+      font-size: 40rpx;
+    }
+
+    &__title {
+      font-size: 20rpx;
+    }
+
+    &--active {
+      color: #fa2c19;
+    }
+  }
+}
+
+.custom-tabbar {
+  :global {
+    .nut-tabbar-item__icon--active,
+    .nut-tabbar-item__text--active {
+      color: #fa2c19 !important;
+    }
+  }
+}

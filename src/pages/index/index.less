@@ -1,0 +1,77 @@
+.index {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list {
+  flex: 1;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  .product-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+
+    .title {
+      font-size: 14px;
+      margin: 8px 0;
+    }
+
+    .price {
+      color: #ff0000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .sales {
+      color: #999;
+      font-size: 12px;
+    }
+
+    .badge {
+      color: #ff6b00;
+      font-size: 12px;
+    }
+  }
+}
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .search-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+    padding: 10px;
+  }
+
+  .scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 60px; // 搜索框的高度
+    margin-bottom: 50px; // TabBar的高度
+  }
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
+}
