@@ -2,7 +2,6 @@ import { defineConfig, type UserConfigExport } from '@tarojs/cli'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
 import prodConfig from './prod'
-import vitePluginImp from 'vite-plugin-imp'
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
@@ -29,7 +28,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
     framework: 'react',
     compiler: {
 
-      type: 'webpack5', 
+      type: 'webpack5',
       prebundle: {
         enable: false
       }
@@ -44,6 +43,22 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
           config: {
             selectorBlackList: ['nut-']
           }
+        },
+        px2rem: {
+          enable: true,
+          config: {
+            onePxTransform: true,
+            unitPrecision: 5,
+            propList: ['*'],
+            selectorBlackList: [],
+            replace: true,
+            mediaQuery: false,
+            minPixelValue: 0,
+            exclude: /node_modules/i
+          }
+        },
+        miniCssExtractPluginOption: {
+          ignoreOrder: true,
         },
         cssModules: {
           enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true

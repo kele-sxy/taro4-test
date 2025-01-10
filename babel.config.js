@@ -7,7 +7,8 @@ module.exports = {
         framework: 'react',
         ts: 'true',
         compiler: 'webpack5',
-      }]
+      }
+    ]
   ],
   plugins: [
     [
@@ -18,7 +19,7 @@ module.exports = {
         "style": 'css',
         "camel2DashComponentName": false
       },
-      'nutui-react-taro'
+      'nutui-react'
     ]
   ]
 }

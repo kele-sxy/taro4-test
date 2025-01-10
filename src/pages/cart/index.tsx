@@ -1,5 +1,5 @@
 import { View, Image } from '@tarojs/components'
-import { ConfigProvider, SearchBar, Tag, Button, InputNumber } from '@nutui/nutui-react-taro'
+import { ConfigProvider, Button, InputNumber } from '@nutui/nutui-react-taro'
 import { useState } from 'react'
 import './index.less'
 import CustomTabBar from '@/components/CustomTabBar'
